@@ -1,4 +1,4 @@
-package job4j_tracker.oop;
+package ru.job4j.tracker.oop;
 
 public class Cat {
     public static void main(String[] args) {
