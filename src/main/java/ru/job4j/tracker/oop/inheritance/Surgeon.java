@@ -9,7 +9,7 @@ public class Surgeon extends Doctor {
     }
 
     public String diagnosis(boolean cardiogram) {
-        if (cardiogram) {return "good";}
-        else {return "bead";}
+        if (cardiogram) { return "good";}
+        else { return "bead";}
     }
 }
