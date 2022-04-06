@@ -8,7 +8,7 @@ public class Programmer extends Engineer {
         this.language = language;
     }
 
-    public String code(){
+    public String code() {
         return "Hello world!";
     }
 }

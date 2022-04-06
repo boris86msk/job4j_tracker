@@ -8,7 +8,7 @@ public class Engineer extends Profession {
         this.branch = branch;
     }
 
-    public String proоect() {
+    public String project() {
         return "New project";
     }
 }

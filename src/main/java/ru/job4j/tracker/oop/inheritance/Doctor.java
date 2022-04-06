@@ -8,7 +8,7 @@ public class Doctor extends Profession {
         this.specialization = specialization;
     }
 
-    public String sickLeave(int day){
+    public String sickLeave(int day) {
         return "Sick leave for " + day + "days";
     }
 }
