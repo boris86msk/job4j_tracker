@@ -13,9 +13,13 @@ public class Profession {
         this.birthday = birthday;
     }
 
-    public String getName() {return  name;}
+    public String getName() {
+        return  name;
+    }
 
-    public String getSurname() {return  surname;}
+    public String getSurname() {
+        return  surname;
+    }
 
     public String getEducation() {
         return  education;
