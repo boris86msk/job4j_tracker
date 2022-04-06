@@ -1,15 +1,15 @@
 package ru.job4j.tracker.oop;
 
 public class Reduce {
-    private int[] array1;
+    private int[] array;
 
     public void to(int[] array) {
-        array1 = array;
+        this.array = array;
     }
 
     public void print() {
-        for (int index = 0; index < array1.length; index++) {
-            System.out.println(array1[index]);
+        for (int index = 0; index < array.length; index++) {
+            System.out.println(array[index]);
         }
     }
 
