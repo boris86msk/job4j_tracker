@@ -28,6 +28,4 @@ public class Profession {
     public int getBirthday() {
         return  birthday;
     }
-
-
 }
