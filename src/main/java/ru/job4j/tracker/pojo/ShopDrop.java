@@ -2,7 +2,7 @@ package ru.job4j.tracker.pojo;
 
 public class ShopDrop {
     public static Product[] delete(Product[] products, int index) {
-        if ( index == products.length - 1) {
+        if (index == products.length - 1) {
             products[index] = null;
         } else {
             for (int i = index; i < products.length - 1; i++) {
