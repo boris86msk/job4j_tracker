@@ -20,9 +20,8 @@ public class Item {
         this.id = id;
     }
 
-    public String getTime(String pattern) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
-        return created.format(formatter);
+    public LocalDateTime getTime() {
+        return created;
     }
 
     public int getId() {
