@@ -6,6 +6,7 @@ public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
+    private java.lang.System System;
 
     public Item add(Item item) {
         item.setId(ids++);
@@ -48,10 +49,19 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         boolean rsl = false;
-        if (this.findById(id) != null) {
-            this.findById(id).setName(item.getName());
+        Item it = this.findById(id);
+        if (it != null) {
+            it.setName(item.getName());
             rsl = true;
         }
         return rsl;
+    }
+
+    public boolean delete(int id) {
+        int index = this.indexOf(id);
+        System.arraycopy(this.items, index + 1, this.items, index, size - index -1);
+        items[size - 1] = null;
+        size--;
+        return true;
     }
 }
