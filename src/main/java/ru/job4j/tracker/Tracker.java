@@ -49,19 +49,27 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         boolean rsl = false;
-        Item it = this.findById(id);
-        if (it != null) {
-            it.setName(item.getName());
-            rsl = true;
+        if (id < 1) {
+            rsl = false;
+        } else {
+            Item it = this.findById(id);
+            if (it != null) {
+                it.setName(item.getName());
+                rsl = true;
+            }
         }
         return rsl;
     }
 
     public boolean delete(int id) {
-        int index = this.indexOf(id);
-        System.arraycopy(this.items, index + 1, this.items, index, size - index - 1);
-        items[size - 1] = null;
-        size--;
-        return true;
+        if (id < 1) {
+            return false;
+        } else {
+            int index = this.indexOf(id);
+            System.arraycopy(this.items, index + 1, this.items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+            return true;
+        }
     }
 }
