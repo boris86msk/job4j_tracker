@@ -45,4 +45,13 @@ public class Tracker {
         }
         return rsl;
     }
+
+    public boolean replace(int id, Item item) {
+        boolean rsl = false;
+        if (this.findById(id) != null) {
+            this.findById(id).setName(item.getName());
+            rsl = true;
+        }
+        return rsl;
+    }
 }
