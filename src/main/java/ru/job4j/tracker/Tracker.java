@@ -47,7 +47,7 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean replace(int id, Item item) {
+    public boolean replace (int id, Item item) {
         boolean rsl = false;
         Item it = this.findById(id);
         if (it != null) {
@@ -57,7 +57,7 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean delete(int id) {
+    public boolean delete (int id) {
         int index = this.indexOf(id);
         System.arraycopy(this.items, index + 1, this.items, index, size - index -1);
         items[size - 1] = null;
