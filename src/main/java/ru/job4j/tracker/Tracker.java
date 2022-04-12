@@ -51,8 +51,8 @@ public class Tracker {
         boolean rsl = false;
         if (id > 0) {
             int index = this.indexOf(id);
-            items[index].setId(id);
             items[index] = item;
+            items[index].setId(id);
                 rsl = true;
             }
         return rsl;
