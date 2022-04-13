@@ -13,10 +13,13 @@ public class MagicBall {
         switch (num) {
             case 0:
                 answer = "Да";
+                break;
             case 1:
                 answer = "Нет";
+                break;
             default:
                 answer = "Может быть";
+                break;
         }
         System.out.println(answer);
     }
