@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import org.hamcrest.Matcher;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -42,6 +43,6 @@ public class StartUITest {
         };
         StartUI.deleteItem(new StubInput(answers), tracker);
         Item edited = tracker.findById(item.getId());
-        assertThat(edited, is((Matcher<Object>) null));
+        Assert.assertNull(edited);
     }
 }
