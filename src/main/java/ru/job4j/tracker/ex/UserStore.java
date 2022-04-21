@@ -5,7 +5,7 @@ public class UserStore {
         boolean rsl = false;
         int index = -1;
         for (int i = 0; i < users.length; i++) {
-            if (users[i].getUsername().equals(login)){
+            if (users[i].getUsername().equals(login)) {
                 rsl = true;
                 index = i;
                 break;
