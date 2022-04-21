@@ -1,6 +1,6 @@
 package ru.job4j.tracker.ex;
 
-public class ElementNotFoundException extends Exception{
+public class ElementNotFoundException extends Exception {
     public static int indexOf(String[] value, String key) throws ElementNotFoundException {
         if (key == null) {
             throw new ElementNotFoundException();
