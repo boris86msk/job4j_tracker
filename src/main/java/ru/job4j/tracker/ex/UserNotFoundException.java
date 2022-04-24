@@ -2,7 +2,7 @@ package ru.job4j.tracker.ex;
 
 public class UserNotFoundException extends Exception {
 
-    public void printStackTrace() {
+    public UserNotFoundException() {
         System.out.println("user not found");
     }
 }

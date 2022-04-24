@@ -2,16 +2,14 @@ package ru.job4j.tracker.ex;
 
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
-        boolean rsl = false;
         int index = -1;
-        for (int i = 0; i < users.length; i++) {
+        for (int i = 0; i < users.length; i++)  {
             if (users[i].getUsername().equals(login)) {
-                rsl = true;
                 index = i;
                 break;
             }
         }
-        if (!rsl) {
+        if (index == -1) {
             throw new UserNotFoundException();
         }
         return users[index];
