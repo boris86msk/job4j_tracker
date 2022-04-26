@@ -2,17 +2,12 @@ package ru.job4j.tracker.ex;
 
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
-        int index = -1;
-        for (int i = 0; i < users.length; i++)  {
-            if (users[i].getUsername().equals(login)) {
-                index = i;
-                break;
+        for (User user : users)  {
+            if (user.getUsername().equals(login)) {
+                return user;
             }
         }
-        if (index == -1) {
-            throw new UserNotFoundException();
-        }
-        return users[index];
+        throw new UserNotFoundException();
     }
 
     public static boolean validate(User user) throws UserInvalidException {
@@ -27,7 +22,7 @@ public class UserStore {
             User[] users = {
                     new User("Boris Pokidov", true)
             };
-            User user = findUser(users, "Boris Pokido");
+            User user = findUser(users, "Boris Pokidov");
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
