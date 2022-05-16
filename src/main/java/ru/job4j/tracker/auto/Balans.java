@@ -1,6 +1,6 @@
 package ru.job4j.tracker.auto;
 
-public class Balans implements Service{
+public class Balans implements Service {
 
     private String label;
     private double price;

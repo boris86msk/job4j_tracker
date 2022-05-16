@@ -1,6 +1,6 @@
 package ru.job4j.tracker.auto;
 
-public class ServiceDecorator implements Service{
+public class ServiceDecorator implements Service {
 
     private Service service;
     private String label;

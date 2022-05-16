@@ -1,6 +1,6 @@
 package ru.job4j.tracker.auto;
 
-public class Shinomontaj implements Service{
+public class Shinomontaj implements Service {
     private String label;
     private double price;
 
