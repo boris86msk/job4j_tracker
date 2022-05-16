@@ -9,13 +9,13 @@ public class StartUI {
         this.out = out;
     }
 
-    public void init(Input input, Tracker tracker, ArrayList actions) {
+    public void init(Input input, Tracker tracker, ArrayList<UserAction> actions) {
         boolean run = true;
         while (run) {
             this.showMenu(actions);
             int select = input.askInt("Select: ");
             if (select < 0 || select >= actions.size()) {
-                out.println("Wrong input, you can select: 0 .. " + (actions.size() - 1));
+                out.println("Wrong input, you can select: 0 .. " + (actions.size()));
                 continue;
             }
             UserAction action = actions.get(select);
@@ -23,14 +23,12 @@ public class StartUI {
         }
     }
 
-    private void showMenu(ArrayList actions) {
+    private void showMenu(ArrayList<UserAction> actions) {
         out.println("Menu:");
         int index = 0;
-        for (int index = 0; index < actions.size(); index++) {
-            out.println(index + ". " + actions[index].name());
-        }
         for (UserAction action : actions) {
             out.println(index + ". " + action.name());
+            index++;
         }
     }
 
