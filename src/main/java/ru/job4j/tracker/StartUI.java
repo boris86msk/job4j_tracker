@@ -43,6 +43,7 @@ public class StartUI {
                 new FindActionByName(output),
                 new ExitAction(output)
         );
+
         new StartUI(output).init(input, tracker, actions);
     }
 }
