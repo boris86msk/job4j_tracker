@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Tracker {
@@ -18,7 +17,7 @@ public class Tracker {
         return List.copyOf(items);
     }
 
-    public List findByName(String key) {
+    public List<Item> findByName(String key) {
         ArrayList<Item> rsl = new ArrayList<>();
         for (Item i : items) {
             String name = i.getName();
