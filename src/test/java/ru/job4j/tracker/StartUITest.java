@@ -18,7 +18,7 @@ public class StartUITest {
                 new String[] {"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
                 new CreateAction(output),
                 new ExitAction(output)
                 );
@@ -35,7 +35,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
             new EditAction(output),
             new ExitAction(output)
             );
@@ -51,7 +51,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
         );
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
                 new DeleteAction(output),
                 new ExitAction(output)
                 );
@@ -68,7 +68,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", String.valueOf(one.getId()), replaceName, "1"}
         );
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
             new EditAction(out),
             new ExitAction(out)
             );
@@ -95,7 +95,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", "1"}
         );
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
             new ShowAllAction(out),
             new ExitAction(out)
             );
@@ -123,7 +123,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", name, "1"}
         );
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
                 new FindActionByName(out),
                 new ExitAction(out)
                 );
@@ -150,7 +150,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0", String.valueOf(one.getId()), "1"}
         );
-        List<UserAction> actions = List.of (
+        List<UserAction> actions = List.of(
                 new FindActionById(out),
                 new ExitAction(out)
                 );

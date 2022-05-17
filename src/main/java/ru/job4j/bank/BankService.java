@@ -38,7 +38,7 @@ public class BankService {
         if (user == null) {
             return null;
         }
-        for (Account account : users.get(user)){
+        for (Account account : users.get(user)) {
             if (account.getRequisite().equals(requisite)) {
                 acc = account;
                 break;
