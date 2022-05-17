@@ -1,4 +1,4 @@
-package ru.job4j.tracker.ooa;
+package ru.job4j.ooa;
 
 public class Aircraft {
     public void printModel() {
