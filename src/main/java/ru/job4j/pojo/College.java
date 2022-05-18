@@ -1,4 +1,4 @@
-package ru.job4j.tracker.pojo;
+package ru.job4j.pojo;
 
 public class College {
     public static void main(String[] args) {

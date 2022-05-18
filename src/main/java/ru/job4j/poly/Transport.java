@@ -1,4 +1,4 @@
-package ru.job4j.tracker.poly;
+package ru.job4j.poly;
 
 public interface Transport {
     void drive();
