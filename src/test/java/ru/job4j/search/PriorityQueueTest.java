@@ -1,4 +1,4 @@
-package ru.job4j.tracker.search;
+package ru.job4j.search;
 
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
