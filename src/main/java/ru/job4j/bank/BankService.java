@@ -18,7 +18,6 @@ public class BankService {
         if (!arr.contains(account)) {
             arr.add(account);
         }
-
     }
 
     public User findByPassport(String passport) {
@@ -50,6 +49,13 @@ public class BankService {
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         boolean rsl = false;
+        Account accSrc = findByRequisite(srcPassport, srcRequisite);
+        Account accDest = findByRequisite(destPassport, destRequisite);
+        if (accSrc.getBalance() >= amount) {
+            accDest.setBalance(accDest.getBalance() + amount);
+            accSrc.setBalance(accSrc.getBalance() - amount);
+            rsl = true;
+        }
         return rsl;
     }
 }
