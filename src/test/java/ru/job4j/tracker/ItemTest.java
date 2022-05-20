@@ -1,10 +1,11 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-
+import static org.hamcrest.core.Is.is;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ItemTest {
     @Test
@@ -16,14 +17,13 @@ public class ItemTest {
                 new Item("Lua", 4)
         );
         List<Item> itemsExpected = Arrays.asList(
-                new Item("C++", 1),
-                new Item("Java", 2),
-                new Item("Lua", 3),
-                new Item("Phyton", 4)
+                new Item("C++", 3),
+                new Item("Java", 1),
+                new Item("Lua", 4),
+                new Item("Phyton", 2)
         );
-        System.out.println(items);
         Collections.sort(items, new ItemAscByName());
-        System.out.println(items);
+        assertThat(items, is(itemsExpected));
     }
 
     @Test
@@ -35,13 +35,12 @@ public class ItemTest {
                 new Item("Lua", 4)
         );
         List<Item> itemsExpected = Arrays.asList(
-                new Item("Phyton", 1),
-                new Item("Lua", 2),
-                new Item("Java", 3),
-                new Item("C++", 4)
+                new Item("Phyton", 2),
+                new Item("Lua", 4),
+                new Item("Java", 1),
+                new Item("C++", 3)
         );
-        System.out.println(items);
         Collections.sort(items, new ItemDescByName());
-        System.out.println(items);
+        assertThat(items, is(itemsExpected));
     }
 }
