@@ -19,7 +19,6 @@ public class User implements Comparable<User> {
         } else {
             return this.name.compareTo(o.name);
         }
-        //return 1;
     }
 
     @Override
@@ -39,12 +38,4 @@ public class User implements Comparable<User> {
     public int hashCode() {
         return Objects.hash(name, age);
     }
-
-//    @Override
-//    public String toString() {
-//        return "User{" +
-//                "name='" + name + '\'' +
-//                ", age=" + age +
-//                '}';
-//    }
 }
