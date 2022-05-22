@@ -57,4 +57,14 @@ public class StringCompareTest {
         );
         assertThat(rst, lessThan(0));
     }
+
+    @Test
+    public void whenStringsAreEqualAndNumber(){
+        StringCompare compare = new StringCompare();
+        int rst = compare.compare(
+                "Petrov",
+                "Petrov86"
+        );
+        assertThat(rst, lessThan(0));
+    }
 }
