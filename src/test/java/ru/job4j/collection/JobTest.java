@@ -1,15 +1,10 @@
 package ru.job4j.collection;
 
 import org.junit.Test;
-import ru.job4j.collection.job.Job;
-import ru.job4j.collection.job.JobDescByName;
-import ru.job4j.collection.job.JobDescByPriority;
-import ru.job4j.collection.job.JobDescByPriorityDown;
 
 import java.util.*;
-
-import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class JobTest {
     @Test
@@ -23,16 +18,42 @@ public class JobTest {
     }
 
     @Test
-    public void whenCompatorByNameUp() {
-        Comparator<Job> cmpName = new JobDescByPriorityDown();
-        List<Job> jobs = Arrays.asList(
-                new Job("Aska", 0),
-                new Job("Coock", 2),
-                new Job("Booch", 1)
-
+    public void whenCompatoEqualNameByPriorityDown() {
+        Comparator<Job> cmpName = new JobDescByName().thenComparing(new JobDescByPriorityDown());
+        int rsl = cmpName.compare(
+                new Job("Alyaska", 1),
+                new Job("Alyaska", 0)
         );
-        System.out.println(jobs);
-        Collections.sort(jobs, cmpName);
-        System.out.println(jobs);
+        assertThat(rsl, greaterThan(0));
+    }
+
+    @Test
+    public void whenCompatoEqualPriorityByNameDown() {
+        Comparator<Job> cmpName = new JobDescByPriority().thenComparing(new JobDescByNameDown());
+        int rsl = cmpName.compare(
+                new Job("Borisoglebsk", 1),
+                new Job("Armavir", 1)
+        );
+        assertThat(rsl, greaterThan(0));
+    }
+
+    @Test
+    public void whenCompatoPriorityUp() {
+        Comparator<Job> cmpPrior = new JobDescByPriority();
+        int rsl = cmpPrior.compare(
+                new Job("Borisoglebsk", 1),
+                new Job("Armavir", 2)
+        );
+        assertThat(rsl, lessThan(0));
+    }
+
+    @Test
+    public void whenCompatoNameUp() {
+        Comparator<Job> cmpPrior = new JobDescByName();
+        int rsl = cmpPrior.compare(
+                new Job("Alisa", 1),
+                new Job("Lisa", 2)
+        );
+        assertThat(rsl, greaterThan(0));
     }
 }
