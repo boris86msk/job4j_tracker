@@ -24,7 +24,7 @@ public class JobTest {
                 new Job("Alyaska", 1),
                 new Job("Alyaska", 0)
         );
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl, lessThan(0));
     }
 
     @Test
