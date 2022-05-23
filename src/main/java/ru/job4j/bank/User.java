@@ -2,6 +2,12 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает модель пользователя банка с двумя приватными
+ * полями "passport" и "username", доступ через гетторы.
+ * @author boris pokidov
+ * @version 1.0
+ */
 public class User {
     private String passport;
     private String username;
