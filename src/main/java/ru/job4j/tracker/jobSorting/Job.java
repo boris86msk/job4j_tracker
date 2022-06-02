@@ -1,4 +1,4 @@
-package ru.job4j.collection;
+package ru.job4j.tracker.jobSorting;
 
 public class Job implements Comparable<Job> {
     private String name;
@@ -20,7 +20,10 @@ public class Job implements Comparable<Job> {
 
     @Override
     public String toString() {
-        return "Job{" + name + ", " + priority + '}';
+        return "Job{" +
+                "name='" + name + '\'' +
+                ", priority=" + priority +
+                '}';
     }
 
     @Override

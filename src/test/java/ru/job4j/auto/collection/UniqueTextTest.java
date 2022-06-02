@@ -1,6 +1,7 @@
-package ru.job4j.collection;
+package ru.job4j.auto.collection;
 
 import org.junit.Test;
+import ru.job4j.collection.UniqueText;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
