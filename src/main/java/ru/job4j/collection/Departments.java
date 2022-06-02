@@ -27,4 +27,5 @@ public class Departments {
     public static void sortDesc(List<String> orgs) {
         orgs.sort(new DepDescComp());
     }
+
 }
