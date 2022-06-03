@@ -1,4 +1,4 @@
-package ru.job4j.tracker.jobSorting;
+package ru.job4j.tracker.jobsorting;
 
 import java.util.Arrays;
 import java.util.Collections;
