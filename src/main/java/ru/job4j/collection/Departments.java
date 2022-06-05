@@ -8,12 +8,8 @@ public class Departments {
         for (String dep : deps) {
             String start = "";
             for (String el : dep.split("/")) {
-                if (el.length() < 3) {
-                    tmp.add(el);
-                    start = el;
-                } else {
-                    tmp.add(start + "/" + el);
-                }
+                start += "".equals(start) ? el : "/" + el;
+                tmp.add(start);
             }
         }
         return new ArrayList<>(tmp);
