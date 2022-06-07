@@ -6,18 +6,16 @@ import java.util.stream.Collectors;
 
 public class Profiles {
     public static List<Address> collect(List<Profile> profiles) {
-        List<Address> rsl = profiles.stream()
+        return profiles.stream()
                 .map(Profile::getAddress)
                 .collect(Collectors.toList());
-        return rsl;
     }
 
     public static List<Address> collectSortWithoutDuplicate(List<Profile> profiles) {
-        List<Address> rsl = profiles.stream()
+        return profiles.stream()
                 .map(Profile::getAddress)
                 .sorted(Comparator.comparing(Address::getCity))
                 .distinct()
                 .collect(Collectors.toList());
-        return rsl;
     }
 }
