@@ -17,7 +17,7 @@ public class BankService {
     private final Map<User, List<Account>> users = new HashMap<>();
 
     public void addUser(User user) {
-        users.putIfAbsent(user, new ArrayList<Account>());
+        users.putIfAbsent(user, new ArrayList<>());
     }
 
     /**
@@ -40,18 +40,14 @@ public class BankService {
     /**
      * Метод возвращает объект пользователя по номеру паспорта
      * при условии что такой пользователь зарегестрирован.
-     * @param passport
      * @return объект User.
      */
+
     public User findByPassport(String passport) {
-        User usr = null;
-        for (User user : users.keySet()) {
-            if (user.getPassport().equals(passport)) {
-                usr = user;
-                break;
-            }
-        }
-        return usr;
+        return users.keySet().stream()
+                .filter(user -> user.getPassport().equals(passport))
+                .findFirst()
+                .orElse(null);
     }
 
     /**
@@ -61,18 +57,16 @@ public class BankService {
      * @param requisite реквизит
      * @return Account acc
      */
+
     public Account findByRequisite(String passport, String requisite) {
-        Account acc = null;
         User user = findByPassport(passport);
         if (user != null) {
-            for (Account account : users.get(user)) {
-                if (account.getRequisite().equals(requisite)) {
-                    acc = account;
-                    break;
-                }
+            return users.get(user).stream()
+                    .filter(account -> account.getRequisite().equals(requisite))
+                    .findFirst()
+                    .orElse(null);
             }
-        }
-        return acc;
+        return null;
     }
 
     /**
