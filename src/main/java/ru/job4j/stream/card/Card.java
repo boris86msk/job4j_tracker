@@ -18,4 +18,12 @@ public class Card {
                         .map(val -> new Card(su, val)))
                 .forEach(System.out::println);
     }
+
+    @Override
+    public String toString() {
+        return "Card{"
+                + "suit=" + suit
+                + ", value=" + value
+                + '}';
+    }
 }
