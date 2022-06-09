@@ -9,31 +9,31 @@ public class PhoneDictionaryTest {
 
     @Test
     public void testWenPetorInPerson() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
-        ArrayList<Person> persons = phones.find("Petr");
+        var persons = phones.find("Petr");
         assertThat(persons.get(0).getSurname(), is("Arsentev"));
     }
 
     @Test
     public void testWenBorisInPersons() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Petr", "Arsentev", "534872", "Bryansk"));
         phones.add(new Person("Boris", "Pokidov", "4755505", "Tambov"));
         phones.add(new Person("Ivan", "Ivanov", "139950", "Tagil"));
-        ArrayList<Person> persons = phones.find("55");
+        var persons = phones.find("55");
         assertThat(persons.get(0).getName(), is("Boris"));
     }
 
     @Test
     public void testWenNotFound() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
-        ArrayList<Person> persons = phones.find("Voronej");
+        var persons = phones.find("Voronej");
         assertThat(persons.size(), is(0));
     }
 }
