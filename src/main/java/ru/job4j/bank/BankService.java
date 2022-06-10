@@ -25,9 +25,9 @@ public class BankService {
      * @param account объект класса Account: номер счета, баланс.
      */
     public void addAccount(String passport, Account account) {
-        User user = findByPassport(passport);
-        if (user != null) {
-            List<Account> arr = users.get(user);
+        Optional<User> user = findByPassport(passport);
+        if (user.isPresent()) {
+            List<Account> arr = users.get(user.get());
             if (!arr.contains(account)) {
                 arr.add(account);
             }
@@ -40,11 +40,10 @@ public class BankService {
      * @return объект User.
      */
 
-    public User findByPassport(String passport) {
+    public Optional<User> findByPassport(String passport) {
         return users.keySet().stream()
                 .filter(user -> user.getPassport().equals(passport))
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 
     /**
@@ -55,13 +54,12 @@ public class BankService {
      * @return Account acc
      */
 
-    public Account findByRequisite(String passport, String requisite) {
-        User user = findByPassport(passport);
-        if (user != null) {
-            return users.get(user).stream()
+    public Optional<Account> findByRequisite(String passport, String requisite) {
+        Optional<User> user = findByPassport(passport);
+        if (user.isPresent()) {
+            return users.get(user.get()).stream()
                     .filter(account -> account.getRequisite().equals(requisite))
-                    .findFirst()
-                    .orElse(null);
+                    .findFirst();
             }
         return null;
     }
@@ -80,11 +78,12 @@ public class BankService {
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         boolean rsl = false;
-        Account accSrc = findByRequisite(srcPassport, srcRequisite);
-        Account accDest = findByRequisite(destPassport, destRequisite);
-        if (accSrc != null && accDest != null && accSrc.getBalance() >= amount) {
-            accDest.setBalance(accDest.getBalance() + amount);
-            accSrc.setBalance(accSrc.getBalance() - amount);
+        Optional<Account> accSrc = findByRequisite(srcPassport, srcRequisite);
+        Optional<Account> accDest = findByRequisite(destPassport, destRequisite);
+        if (accSrc.isPresent() && accDest.isPresent()
+                && accSrc.get().getBalance() >= amount) {
+            accDest.get().setBalance(accDest.get().getBalance() + amount);
+            accSrc.get().setBalance(accSrc.get().getBalance() - amount);
             rsl = true;
         }
         return rsl;
