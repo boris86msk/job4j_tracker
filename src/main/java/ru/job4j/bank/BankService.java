@@ -60,7 +60,6 @@ public class BankService {
                         .stream()
                         .filter(account -> account.getRequisite().equals(requisite))
                         .findFirst());
-
     }
 
     /**
