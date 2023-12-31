@@ -11,7 +11,7 @@ import ru.job4j.tracker.store.Store;
 import java.time.LocalDateTime;
 import java.time.Month;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
