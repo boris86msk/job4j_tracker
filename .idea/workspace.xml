@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fdfac71-7038-4a21-a5f7-74ac7875bb2c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/HQLUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/HQLUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/CreateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/CreateAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/CreateManyActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/CreateManyActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/DeleteAllAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/DeleteAllAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/EditAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/EditAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/FindActionById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/FindActionById.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/FindActionByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/FindActionByName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/ShowAllAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/action/ShowAllAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/input/ValidateInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/input/ValidateInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/model/UserMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/model/UserMessenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/store/HbmTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/store/HbmTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/store/MemTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/tracker/store/MemTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/FindActionByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/FindActionByIdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/FindActionByNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/FindActionByNameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/ItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/MemTrackerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/MemTrackerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/ValidateInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/tracker/ValidateInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/github/workflows/maven.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +31,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/projects/job4j_tracker/src/test"
+    "last_opened_file_path": "C:/projects/job4j_tracker/src/test",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -98,11 +78,31 @@
       <option name="presentableId" value="Default" />
       <updated>1703973213963</updated>
       <workItem from="1703973215876" duration="519000" />
-      <workItem from="1704023372284" duration="839000" />
+      <workItem from="1704023372284" duration="2101000" />
     </task>
+    <task id="LOCAL-00001" summary="first change">
+      <created>1704024480781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704024480781</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add git Action">
+      <created>1704024525861</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704024525861</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first change" />
+    <MESSAGE value="add git Action" />
+    <option name="LAST_COMMIT_MESSAGE" value="add git Action" />
   </component>
 </project>
