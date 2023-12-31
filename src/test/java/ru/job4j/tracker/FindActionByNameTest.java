@@ -25,7 +25,7 @@ class FindActionByNameTest {
         tracker.add(new Item(1, "first_item", LocalDateTime.of(2023, Month.AUGUST, 12, 12, 10)));
         tracker.add(new Item(2, "second_item", LocalDateTime.of(2023, Month.AUGUST, 12, 12, 11)));
         FindActionByName findActionById = new FindActionByName(out);
-        String itemView = "Item(id=2, name=second_item, created=2023-08-12T12:11)";
+        String itemView = "Item(id=2, name=second_item, created=2023-08-12T12:11, participates=[])";
 
         Input input = mock(Input.class);
         when(input.askStr(any(String.class))).thenReturn("second_item");
