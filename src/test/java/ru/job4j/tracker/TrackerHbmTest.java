@@ -85,8 +85,23 @@ public class TrackerHbmTest {
     }
 
     @Test
-    public void whenNeedFindItemByName() throws Exception {
+    public void whenFindItemByName() throws Exception {
         try (var tracker = new HbmTracker()) {
+            String name = "myName";
+            Item item = new Item();
+            item.setName(name);
+            tracker.add(item);
+            assertThat(tracker.findByName(name)).contains(item);
+        }
+    }
+
+    @Test
+    public void whenFindItemById() throws Exception {
+        try (var tracker = new HbmTracker()) {
+            Item item = new Item();
+            tracker.add(item);
+            int itemId = item.getId();
+            assertThat(tracker.findById(itemId)).isEqualTo(item);
         }
     }
 }
