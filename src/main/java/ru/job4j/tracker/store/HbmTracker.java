@@ -78,7 +78,7 @@ public class HbmTracker implements Store, AutoCloseable {
         Session session = sf.openSession();
         try {
             session.beginTransaction();
-            List<Item> fromUser = session.createQuery("from Item ORDER BY id", Item.class).list();
+            List<Item> fromUser = session.createQuery("from Item i left join fetch i.participates", Item.class).list();
             session.getTransaction().commit();
             return fromUser;
         } catch (HibernateException e) {
