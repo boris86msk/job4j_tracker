@@ -2,5 +2,5 @@
 *.iml
 *.zip
 *.rar
-.db
+**.db
 target
